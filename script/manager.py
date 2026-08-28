@@ -15,4 +15,4 @@ class Manager:
             if i.titul == titul:
                 for cmd in i.cmds:
                     self.commandManager.execute(cmd)
-                    break
+                    

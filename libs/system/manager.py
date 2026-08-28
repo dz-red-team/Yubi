@@ -1,8 +1,10 @@
 import os
+import ctypes
+from datetime import timedelta
 import libs.system as system
 
 def getProfile() -> system.profile.Profile:
-    return system.profile.Profile(os.getlogin) 
+    return system.profile.Profile(os.getlogin()) 
 
 def getUptime() -> str:
     lib = ctypes.windll.kernel32
