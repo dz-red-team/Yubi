@@ -7,4 +7,4 @@ class Test(Command):
         super().__init__(type=name)
     
     def execute(self,args: dict):
-        sys.stdout.write(str(args)+"\n")
+        return str(args) + "\n"

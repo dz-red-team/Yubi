@@ -7,9 +7,8 @@ class Manager:
         self.commands_storage.append(commands_package.test.Test("test"))
         self.commands_storage.append(commands_package.fetch.Fetch("fetch"))
 
-    def execute(self,line: str):
+    def execute(self,line: str) -> str:
         parts = line.split()
         for i in self.commands_storage:
             if i.type == parts[0]:
-                i.execute(parts)
-                break
+                return i.execute(parts)

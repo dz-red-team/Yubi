@@ -24,7 +24,8 @@ def root() -> bool:
         try:
             user_input = input(f"{color.RED}>{color.RESET} ")
             if user_input.strip():
-                    commandManager.execute(user_input)
+                    output: str = commandManager.execute(user_input)
+                    sys.stdout.write(output)
                     
         except KeyboardInterrupt:
             sys.stdout.write(f"{color.LIGHT_BLACK}^C{color.RESET}\n")

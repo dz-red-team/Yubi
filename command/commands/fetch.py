@@ -7,7 +7,6 @@ class Fetch(Command):
     def __init__(self,name: str):
         super().__init__(type=name)
     
-    def execute(self,args: dict):
+    def execute(self,args: dict) -> str:
         profile: system.profile.Profile = system.manager.getProfile()
-        sys.stdout.write(f"User: {profile.user}\n")
-        sys.stdout.write(f"Uptime: {system.manager.getUptime()}\n")
+        return f"User: {profile.user}\n" + f"Uptime: {system.manager.getUptime()}\n"
