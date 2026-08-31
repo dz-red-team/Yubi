@@ -29,3 +29,11 @@ def kill_process(pid_or_name: str) -> bool:
         return True
     except:
         return False
+
+# Запуск процесса
+def run_process(path: str) -> bool:
+    try:
+        subprocess.run(path,shell=True)
+        return True
+    except:
+        return False
